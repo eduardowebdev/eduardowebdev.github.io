@@ -12,21 +12,6 @@ const projetos: Projeto[] = [
     descricao: "Sem descrição",
     tags: ["sem", "tags"],
   },
-  {
-    titulo: "Dashboard Analytics",
-    descricao: "Painel de controle para visualização de dados em tempo real com gráficos interativos.",
-    tags: ["React", "Recharts", "API REST"],
-  },
-  {
-    titulo: "Plataforma de Cursos",
-    descricao: "Sistema de gestão de aprendizagem (LMS) com player de vídeo e certificados.",
-    tags: ["Next.js", "Prisma", "PostgreSQL"],
-  },
-  {
-    titulo: "Landing Page SaaS",
-    descricao: "Página de conversão otimizada com animações suaves e design focado em resultados.",
-    tags: ["HTML", "CSS", "Framer Motion"],
-  }
 ];
 
 export default function Projetos() {
