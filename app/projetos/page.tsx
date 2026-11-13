@@ -1,6 +1,33 @@
 import Link from "next/link";
 
-const projetos = [];
+type Projeto = {
+  titulo: string;
+  descricao: string;
+  tags: string[];
+};
+
+const projetos: Projeto[] = [
+  {
+    titulo: "Ainda não tenho nenhum projeto :(",
+    descricao: "Sem descrição",
+    tags: ["sem", "tags"],
+  },
+  {
+    titulo: "Dashboard Analytics",
+    descricao: "Painel de controle para visualização de dados em tempo real com gráficos interativos.",
+    tags: ["React", "Recharts", "API REST"],
+  },
+  {
+    titulo: "Plataforma de Cursos",
+    descricao: "Sistema de gestão de aprendizagem (LMS) com player de vídeo e certificados.",
+    tags: ["Next.js", "Prisma", "PostgreSQL"],
+  },
+  {
+    titulo: "Landing Page SaaS",
+    descricao: "Página de conversão otimizada com animações suaves e design focado em resultados.",
+    tags: ["HTML", "CSS", "Framer Motion"],
+  }
+];
 
 export default function Projetos() {
   return (
@@ -13,7 +40,7 @@ export default function Projetos() {
       </p>
 
       <div className="grid gap-6 md:grid-cols-2">
-        {projetos.map((projeto, index) => (
+        {projetos.map((projeto: Projeto, index: number) => (
           <div 
             key={index} 
             className="group flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all hover:-translate-y-1 hover:border-indigo-200 hover:shadow-md dark:border-slate-800 dark:bg-slate-900 dark:hover:border-indigo-500/30"
@@ -27,7 +54,7 @@ export default function Projetos() {
               </p>
             </div>
             <div className="flex flex-wrap gap-2">
-              {projeto.tags.map(tag => (
+              {projeto.tags.map((tag: string) => (
                 <span key={tag} className="text-xs font-semibold tracking-wider text-indigo-500 uppercase dark:text-indigo-400">
                   {tag}
                 </span>
